@@ -1,6 +1,7 @@
 import './App.css'
 import Banner from './Banner/Banner'
 import NavBar from './NavBar/NavBar'
+import OurRecipes from './OurRecipes/OurRecipes'
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <>
       <NavBar></NavBar>
       <Banner></Banner>
+      <OurRecipes></OurRecipes>
     </>
   )
 }

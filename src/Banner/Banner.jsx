@@ -13,8 +13,10 @@ const Banner = () => {
             well world-class Programmer.
           </p>
           <div className="mt-2 md:mt-4 flex gap-5 md:gap-10 justify-center">
+            <a href="#OurRecipes">
             <button className="btn text-[15px] md:text-xl rounded-3xl btn-success">Explore Now</button>
-            <button className="btn text-[15px] md:text-xl rounded-3xl btn-outline">Our Feedback</button>
+            </a>
+            <button className="btn text-[15px] md:text-xl rounded-3xl btn-outline text-white">Our Feedback</button>
           </div>
         </div>
       </div>
