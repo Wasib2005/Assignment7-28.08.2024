@@ -2,7 +2,7 @@ const Banner = () => {
   return (
     <>
       <div className="flex justify-center relative mt-14 text-white md:w-[1280px] m-auto">
-        <img className="w-[600px] md:w-[1100px]" src="./src/assets/Banner.png" alt="" />
+        <img className="w-[600px] md:w-[1100px]" src="./src/assets/Banner.png" alt="banner" />
         <div className="absolute bottom-1/4">
           <h1 className="md:w-[800px] m-auto t text-xl md:text-4xl font-bold">
             Discover an exceptional cooking class tailored for you!

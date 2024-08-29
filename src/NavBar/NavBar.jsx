@@ -4,7 +4,7 @@ const NavBar = () => {
       {/* large and mid device */}
       <div className="text-center w-[640px] md:w-[1280px] m-auto md:flex items-center justify-around">
         <div>
-          <h1 className="text-4xl font-bold">Recipe Calories</h1>
+          <h1 className="text-4xl font-bold">My Kitchen</h1>
         </div>
         <div className="md:flex gap-2">
           <ul className="menu menu-dropdown menu-horizontal">
