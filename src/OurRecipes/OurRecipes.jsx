@@ -13,20 +13,31 @@ const OurRecipes = () => {
       .then((data) => setRecipes(data.recipes));
   }, []);
 
-  const wantList = (Name,Id,Time,Calories) => {
+  const wantList = (Name, Id, Time, Calories, PlNe=1) => {
     const checkRecipe = cookingRecipe.find((element) => {
       return element.Name === Name;
     });
-    
-    if (checkRecipe){
-      checkRecipe.amount=checkRecipe.amount+1
-      setCookingRecipe([...cookingRecipe])
 
-    }
-    else{
-      setCookingRecipe([...cookingRecipe, {"Name":Name,"ID":Id,"amount":1,"Time":Time,"Calories":Calories}])
-    }
+    if (checkRecipe) {
+      if (PlNe){
+        checkRecipe.amount = checkRecipe.amount + 1;
+        setCookingRecipe([...cookingRecipe]);
+      }
+      else if (checkRecipe.amount!==1){
+        checkRecipe.amount = checkRecipe.amount - 1;
+        setCookingRecipe([...cookingRecipe]);
+      }
+      else{
+        const newCookingRecipe = cookingRecipe.filter(item =>item !== checkRecipe)
+        setCookingRecipe(newCookingRecipe)
+      }
 
+    } else {
+      setCookingRecipe([
+        ...cookingRecipe,
+        { Name: Name, ID: Id, amount: 1, Time: Time, Calories: Calories},
+      ]);
+    }
   };
   return (
     <div id="OurRecipes" className="mt-20 w-[640px] md:w-[1300px] m-auto">
@@ -50,7 +61,11 @@ const OurRecipes = () => {
           <div></div>
         </div>
         <div>
-          <WantToCook cookingRecipe={cookingRecipe}></WantToCook>
+          <WantToCook
+            cookingRecipe={cookingRecipe}
+            setCookingRecipe={setCookingRecipe}
+            wantList={wantList}
+          ></WantToCook>
         </div>
       </div>
     </div>

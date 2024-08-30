@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const Recipe = ({ recipe, wantList }) => {
   const {
@@ -12,16 +12,18 @@ const Recipe = ({ recipe, wantList }) => {
   } = recipe;
 
   return (
-    <div className="border p-5 w-[350px] flex flex-col gap-2 justify-center text-left rounded-2xl">
+    <div className="border p-5 w-[300px] flex flex-col gap-2 justify-center text-left rounded-2xl">
       <img
-        className="max-w-[300px] max-h-[200px] rounded-2xl"
+        className="max-w-[250px] max-h-[200px] rounded-2xl"
         src={recipe_image}
         alt={recipe_name}
       />
       <h1 className="text-2xl font-bold text-black">{recipe_name}</h1>
       <p>{short_description}</p>
       <hr />
-      <h1 className="text-xl text-black font-bold">Ingredients: {ingredients.length}</h1>
+      <h1 className="text-xl text-black font-bold">
+        Ingredients: {ingredients.length}
+      </h1>
       <ul className="pl-8 list-disc">
         {ingredients.map((ingredient, i) => (
           <li className="" key={i}>
@@ -39,7 +41,9 @@ const Recipe = ({ recipe, wantList }) => {
         </p>
       </div>
       <button
-        onClick={() => wantList(recipe_name,recipe_id,preparing_time,calories)}
+        onClick={() =>
+          wantList(recipe_name, recipe_id, preparing_time, calories)
+        }
         className="btn btn-success w-32 rounded-3xl"
       >
         Want to cook
@@ -50,7 +54,7 @@ const Recipe = ({ recipe, wantList }) => {
 
 Recipe.propTypes = {
   recipe: PropTypes.object.isRequired,
-  wantList: PropTypes.func.isRequired
+  wantList: PropTypes.func.isRequired,
 };
 
 export default Recipe;
