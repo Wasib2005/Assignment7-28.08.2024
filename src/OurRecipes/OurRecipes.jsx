@@ -60,7 +60,7 @@ const OurRecipes = () => {
           </div>
           <div></div>
         </div>
-        <div>
+        <div className=" relative">
           <WantToCook
             cookingRecipe={cookingRecipe}
             setCookingRecipe={setCookingRecipe}
