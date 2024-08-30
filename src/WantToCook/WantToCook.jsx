@@ -1,8 +1,14 @@
 import PropTypes from "prop-types";
 import Table from "./Table/Table";
 import { useState } from "react";
+import Total from "../Total/Total";
 
-const WantToCook = ({ cookingRecipe, wantList, setCookingRecipe }) => {
+const WantToCook = ({
+  cookingRecipe,
+  wantList,
+  setCookingRecipe,
+  handleButtonClick,
+}) => {
   const [cookedRecipe, setCookedRecipe] = useState([]);
   const cooked = () => {
     setCookedRecipe([...cookingRecipe]);
@@ -40,12 +46,15 @@ const WantToCook = ({ cookingRecipe, wantList, setCookingRecipe }) => {
       <button
         onClick={() => {
           cooked();
+          handleButtonClick("Cooking is started");
         }}
         className="btn btn-success w-[90%] text-xl font-bold"
       >
         Start Cooking
       </button>
-      <h1 className="text-xl font-bold">Cooking {cookedRecipe.length} Recipes</h1>
+      <h1 className="text-xl font-bold">
+        Cooking {cookedRecipe.length} Recipes
+      </h1>
       <table className="table table-zebra text-center">
         <thead>
           <tr>
@@ -57,18 +66,19 @@ const WantToCook = ({ cookingRecipe, wantList, setCookingRecipe }) => {
           </tr>
         </thead>
 
-          {cookedRecipe.map((element) => (
-            <tbody key={element.ID}>
+        {cookedRecipe.map((element) => (
+          <tbody key={element.ID}>
+            <tr>
               <th>{element.ID}</th>
               <th>{element.Name}</th>
               <th>Cooking</th>
               <th>{element.amount}</th>
               <th>{element.Time}</th>
-            </tbody>
-            
-          ))}
-
+            </tr>
+          </tbody>
+        ))}
       </table>
+      <Total cookedRecipe={cookedRecipe}></Total>
     </div>
   );
 };
@@ -76,6 +86,7 @@ const WantToCook = ({ cookingRecipe, wantList, setCookingRecipe }) => {
 WantToCook.propTypes = {
   cookingRecipe: PropTypes.array,
   setCookingRecipe: PropTypes.func,
+  handleButtonClick: PropTypes.func,
   wantList: PropTypes.func.isRequired,
 };
 

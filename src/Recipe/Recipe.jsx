@@ -34,10 +34,10 @@ const Recipe = ({ recipe, wantList }) => {
       <hr />
       <div className=" flex gap-5 ">
         <p className="flex gap-2 items-center">
-          <img src="/src/assets/clock.svg" alt="" /> {preparing_time} minutes
+          <img src="./assets/clock.svg" alt="" /> {preparing_time} minutes
         </p>
         <p className="flex gap-2 items-center">
-          <img src="/src/assets/calories.svg" alt="" /> {calories} calories
+          <img src="./" alt="" /> {calories} calories
         </p>
       </div>
       <button
