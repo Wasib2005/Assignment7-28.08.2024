@@ -32,14 +32,14 @@ const Recipe = ({ recipe, wantList }) => {
       <hr />
       <div className=" flex gap-5 ">
         <p className="flex gap-2 items-center">
-          <img src="/src/assets/clock.svg" alt="" /> {preparing_time}
+          <img src="/src/assets/clock.svg" alt="" /> {preparing_time} minutes
         </p>
         <p className="flex gap-2 items-center">
           <img src="/src/assets/calories.svg" alt="" /> {calories} calories
         </p>
       </div>
       <button
-        onClick={() => wantList(recipe_id)}
+        onClick={() => wantList(recipe_name,recipe_id,preparing_time,calories)}
         className="btn btn-success w-32 rounded-3xl"
       >
         Want to cook

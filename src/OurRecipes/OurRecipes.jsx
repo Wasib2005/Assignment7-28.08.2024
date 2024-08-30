@@ -13,12 +13,23 @@ const OurRecipes = () => {
       .then((data) => setRecipes(data.recipes));
   }, []);
 
-  const wantList = (recipeId) => {
-    setCookingRecipe(() => [...cookingRecipe, recipeId]);
-  };
+  const wantList = (Name,Id,Time,Calories) => {
+    const checkRecipe = cookingRecipe.find((element) => {
+      return element.Name === Name;
+    });
+    
+    if (checkRecipe){
+      checkRecipe.amount=checkRecipe.amount+1
+      setCookingRecipe([...cookingRecipe])
 
+    }
+    else{
+      setCookingRecipe([...cookingRecipe, {"Name":Name,"ID":Id,"amount":1,"Time":Time,"Calories":Calories}])
+    }
+
+  };
   return (
-    <div id="OurRecipes" className="mt-20 w-[640px] md:w-[1280px] m-auto">
+    <div id="OurRecipes" className="mt-20 w-[640px] md:w-[1300px] m-auto">
       <h1 className="text-4xl font-bold">Options</h1>
       <p className="w-[800px] m-auto mt-7">
         Lorem ipsum dolor sit amet consectetur. Proin et feugiat senectus

@@ -2,7 +2,7 @@
   "recipes": [
     {
       "recipe_image": "https://www.allrecipes.com/thmb/wbWfb-cXCq1yd6NlpJR7z5Nr1Wc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/240708-broccoli-and-chicken-stir-fry-DDMFS-4x3-27886203cb2744f99d15247496019942.jpg",
-      "recipe_id": 1,
+      "recipe_id":  "#00001",
       "recipe_name": "Chicken Stir-Fry",
       "short_description": "A quick and easy stir-fry with chicken, vegetables, and soy sauce.",
       "ingredients": [
@@ -17,7 +17,7 @@
     },
     {
       "recipe_image": "https://www.kitchensanctuary.com/wp-content/uploads/2019/09/Spaghetti-Bolognese-square-FS-0204.jpg",
-      "recipe_id": 2,
+      "recipe_id":  "#00002",
       "recipe_name": "Spaghetti Bolognese",
       "short_description": "A classic Italian pasta dish with a meat-based sauce.",
       "ingredients": [
@@ -32,7 +32,7 @@
     },
     {
       "recipe_image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2023/07/vegetable-curry-recipe.jpg",
-      "recipe_id": 3,
+      "recipe_id":  "#00003",
       "recipe_name": "Vegetable Curry",
       "short_description": "A flavorful vegetarian curry with a variety of vegetables.",
       "ingredients": [
@@ -47,7 +47,7 @@
     },
     {
       "recipe_image": "https://www.washingtonpost.com/resizer/QHMod_FnzsRaXR9oep_ZThxYGTk=/arc-anglerfish-washpost-prod-washpost/public/ZTVDFIBSQ4I6ZABWPWZFLP7ROY.jpg",
-      "recipe_id": 4,
+      "recipe_id":  "#00004",
       "recipe_name": "Salmon with Asparagus",
       "short_description": "A healthy and delicious dish with grilled salmon and asparagus.",
       "ingredients": ["2 salmon fillets", "1 bunch asparagus", "1 lemon"],
@@ -56,7 +56,7 @@
     },
     {
       "recipe_image": "https://www.verybestbaking.com/sites/g/files/jgfbjl326/files/styles/facebook_share/public/recipe-thumbnail/87765-5b069c3ed2feea79377014f6766fcd49_Original_NTH_Chocolate_Chip_Cookie.jpg?itok=ZgWJQ3uG",
-      "recipe_id": 5,
+      "recipe_id":  "#00005",
       "recipe_name": "Chocolate Chip Cookies",
       "short_description": "Classic chocolate chip cookies, perfect for a sweet treat.",
       "ingredients": [
@@ -73,7 +73,7 @@
     },
     {
       "recipe_image": "https://www.allrecipes.com/thmb/mXZ0Tulwn3x9_YB_ZbkiTveDYFE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/229063-Classic-Restaurant-Caesar-Salad-ddmfs-4x3-231-89bafa5e54dd4a8c933cf2a5f9f12a6f.jpg",
-      "recipe_id": 6,
+      "recipe_id":  "#00006",
       "recipe_name": "Caesar Salad",
       "short_description": "A refreshing salad with romaine lettuce, croutons, and Parmesan cheese.",
       "ingredients": [
